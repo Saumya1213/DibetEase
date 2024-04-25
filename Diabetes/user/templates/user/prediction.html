@@ -1,0 +1,105 @@
+{% include "user/navbar.html" %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Predict</title>
+     <style>
+        body {
+          background-color: #0dcaf0;
+        }
+        .main {
+          position: fixed;
+          top: 140px;
+          left: 50%;
+          transform: translateX(-50%); 
+          width: 550px;
+          background-color: #333333;
+          border-radius: 10px;
+          padding: 20px; 
+        }
+        h1 {
+          color: #ffffff;
+          font-size: 30px;
+          margin-bottom: 20px; 
+        }
+        table {
+          width: 100%; 
+          table-layout: fixed; 
+        }
+        th, td {
+          color: white;
+          padding: 8px; 
+          text-align: left; 
+        }
+        th {
+          width: 50%;
+        }
+        input[type="text"], input[type="submit"] {
+          width: 100%; 
+          padding: 8px;
+          border: 1px solid #ccc; 
+        }
+        input[type="submit"] {
+          background-color: #0dcaf0;
+          border: none;
+          color: white;
+          cursor: pointer;
+          margin-top: 15px;
+        }
+        .result {
+          color: white;
+          margin-top: 15px; 
+        }
+      </style>
+    </head>
+    <body>
+      <div class="main">
+        <h1>Please enter the following information:</h1>
+        <form action="result">
+          <table>
+            <tr>
+              <th>pregnancies:</th>
+              <td><input type="text" name="n1"></td>
+            </tr>
+            <tr>
+              <th>Glucose:</th>
+              <td><input type="text" name="n2"></td>
+            </tr>
+            <tr>
+              <th>Blood pressure:</th>
+              <td><input type="text" name="n3"></td>
+            </tr>
+            <tr>
+              <th>Skin Thickness:</th>
+              <td><input type="text" name="n4"></td>
+            </tr>
+            <tr>
+              <th>Insulin:</th>
+              <td><input type="text" name="n5"></td>
+            </tr>
+            <tr>
+              <th>BMI:</th>
+              <td><input type="text" name="n6"></td>
+            </tr>
+            <tr>
+              <th>Diabetes Pedigree Function:</th>
+              <td><input type="text" name="n7"></td>
+            </tr>
+            <tr>
+              <th>Age:</th>
+              <td><input type="text" name="n8"></td>
+            </tr>
+          </table>
+          <input type="submit" value="Predict">
+        </form>
+        <span class="result">Result: {{ result2 }}</span>
+      </div>
+    </body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</html>
